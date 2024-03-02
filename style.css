@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+body {
+  font-family: 'Lobster', cursive;
+  background: url(http://static.pexels.com/wp-content/uploads/2014/08/cold-firs-forest-2505.jpg);
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: 200px;
+  height: 150px;
+  color: #fff;
+  font-size: 38px;
+  position: relative;
+  margin: 10vh auto;
+  text-align: center;
+  font-weight: bold;
+  background: #a90329;
+  /* Old browsers */
+  background: linear-gradient(135deg, #a90329 0%, #8f0222 44%, #6d0019 100%);
+  /* W3C */
+  background-size: cover;
+  border: 15px solid #fff;
+  padding: 50px 0 0 0;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 10px;
+}
+
+.day {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 200px;
+  line-height: 180px;
+  text-align: center;
+  z-index: 100;
+  font-weight: bold;
+  color: #fff;
+  font-size: 72px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  text-shadow: -4px 3px 0 rgba(255, 255, 255, 0.4);
+}
+
+div.left {
+  width: 100px;
+  height: 200px;
+  background: #af7267;
+  /* Old browsers */
+  background: #d91031;
+  -webkit-animation-name: open-left;
+          animation-name: open-left;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  animation-easing-function: cubic-bezier(0.06, 0.63, 0, 1);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 10px solid #950d23;
+  box-sizing: border-box;
+}
+div.left:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 30px;
+  background: #000;
+  border-radius: 10px;
+  left: -12px;
+}
+div.left:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 30px;
+  background: #000;
+  border-radius: 10px;
+  left: -12px;
+  bottom: 0px;
+}
+div.left .panel {
+  content: "";
+  width: 60px;
+  height: 160px;
+  background: rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+div.right {
+  width: 100px;
+  height: 200px;
+  background: #d91031;
+  -webkit-animation-name: open-right;
+          animation-name: open-right;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  animation-easing-function: cubic-bezier(0.06, 0.63, 0, 1);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 10px solid #950d23;
+  box-sizing: border-box;
+  z-index: 50;
+}
+div.right:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 30px;
+  background: #000;
+  border-radius: 10px;
+  right: -12px;
+}
+div.right:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 30px;
+  background: #000;
+  border-radius: 10px;
+  right: -12px;
+  bottom: 0px;
+}
+div.right .panel {
+  content: "";
+  width: 60px;
+  height: 160px;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+@-webkit-keyframes open-left {
+  from {
+    -webkit-transform: perspective(500) rotateY(0deg);
+    -webkit-transform-origin: 0% 50%;
+  }
+  to {
+    -webkit-transform: perspective(500) rotateY(-110deg);
+    -webkit-transform-origin: 0% 50%;
+    background: #a70a24;
+    box-shadow: 10px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+@-webkit-keyframes open-right {
+  from {
+    -webkit-transform: perspective(500) rotateY(0deg);
+    -webkit-transform-origin: 100% 50%;
+  }
+  to {
+    -webkit-transform: perspective(500) rotateY(110deg);
+    -webkit-transform-origin: 100% 50%;
+    background: #a70a24;
+    box-shadow: -10px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
