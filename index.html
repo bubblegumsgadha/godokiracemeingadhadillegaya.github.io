@@ -262,7 +262,12 @@ div.right{
 
   // Append the newDiv to the container
   container.appendChild(newDiv);
-setTimeout(() => {
+        function play() {
+  var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
+  audio.play();
+}
+play();
+setTimeout(function() {
   console.log("this is the second message");
 }, 7000);
   window.location.href = "https://bubblegumsgadha.github.io/godokiracemeingadhadillegaya.github.io/page2.html";
